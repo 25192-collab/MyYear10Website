@@ -1,0 +1,129 @@
+/* A simple css reset */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* The Font Family- Really important!! */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* reset for images to ensure they ar 100% of the parent container width */
+img {
+    width: 100%;
+}
+
+/* The hero section styling- use your OWN Hero Image URL here */
+.hero {
+    background-image: url('images/Website background header.png');
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+/* BIG text styling for the hero section text */
+.hero-text {
+    font-size: 4em;
+    font-weight: bold;
+    color:rgb(0, 0, 0);
+    animation: slideIn 2s ease;
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* nice big font on a banner style background */
+.topic-title{
+     color: rgb(255, 255, 255);
+    font-size: 1em;
+    padding: 10px;
+    background-color: #23456c;
+    text-align: center;
+}
+.topic-title h1{
+    margin: 0;
+}
+
+/* Three column grid with a nice big gap */
+.topic-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6em;
+    /* bring the whole section in off the sides of the page */
+    width: 70%;
+    /* top margin of 3em and center right/left */
+    margin: 3em auto;
+}
+
+/* Styling for the individual topic cards rounded edges background color and a drop shadow */
+.topic-card{
+    background-color: rgb(100, 55, 15);
+    color: white;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+     animation: slideIn 2s ease;
+}
+.topic-card:hover{
+    transform: translateY(-10px);
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* Styling for the topic card titles */
+.topic-card-text{
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    /* center align text */
+    text-align: center;
+}
+
+
+/* Styling for a footer section to take a bit of spcae at the bottom of the page */
+.footer{
+    background-color: rgb(71, 71, 71);
+    color: white;
+    text-align: right;
+    padding: 3em 3em;
+}
+
+.navbar { 
+    background-color: #23456c;
+
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #90e0ef; 
+}
