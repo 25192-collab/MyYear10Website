@@ -1,10 +1,8 @@
-/* A simple css reset */
 body,
 html {
     margin: 0;
     padding: 0;
     height: 100%;
-    /* The Font Family- Really important!! */
     font-family: Arial, sans-serif;
     box-sizing: border-box;
 }
@@ -14,7 +12,7 @@ img {
     width: 100%;
 }
 
-/* The hero section styling- use your OWN Hero Image URL here */
+/* The hero section styling */
 .hero {
     background-image: url('images/Website background header.png');
     height: 25vh;
@@ -62,14 +60,12 @@ img {
 .topic-content{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 6em;
-    /* bring the whole section in off the sides of the page */
+    gap: 2em;
     width: 70%;
-    /* top margin of 3em and center right/left */
     margin: 3em auto;
 }
 
-/* Styling for the individual topic cards rounded edges background color and a drop shadow */
+/* Styling for the individual topic cards */
 .topic-card{
     background-color: rgb(100, 55, 15);
     color: white;
@@ -77,12 +73,12 @@ img {
     border-radius: 0.5em;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-     animation: slideIn 2s ease;
+     animation: slideInCard 2s ease;
 }
 .topic-card:hover{
     transform: translateY(-10px);
 }
-@keyframes slideIn {
+@keyframes slideInCard {
     from {
         transform: translateX(-50px);
         opacity: 0;
@@ -96,12 +92,15 @@ img {
 .topic-card-text{
     font-size: 1.5em;
     margin-bottom: 0.5em;
-    /* center align text */
     text-align: center;
 }
 
-
-/* Styling for a footer section to take a bit of spcae at the bottom of the page */
+.topic-card img {
+    height: 270px; 
+    object-fit: cover; 
+    background-color: #8c8c8c; 
+}
+/* Styling for a footer section */
 .footer{
     background-color: #23456c;
     color: white;
@@ -111,7 +110,6 @@ img {
 
 .navbar { 
     background-color: #23456c;
-
     padding: 15px;
     text-align: center;
 }
@@ -126,4 +124,30 @@ img {
 
 .navbar a:hover {
     color: #90e0ef; 
+}
+
+/* Make the video fill the container nicely */
+.topic-card video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.topic-content.single-video-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px; /* Controls how wide the player area can stretch */
+    margin: 3em auto;
+}
+
+/* Forces the video card container to stretch wide */
+.single-video-page .topic-card {
+    width: 100%;
+    max-width: 800px; /* Change this number to 900px or 1000px if you want it even bigger */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
 }
